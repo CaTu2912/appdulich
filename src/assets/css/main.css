@@ -1,0 +1,348 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Slider */
+.slick-slider {
+  margin: 20px auto;
+  width: 80%;
+}
+
+.slider-item {
+  width: 100%;
+  height: 400px; /* Đặt chiều cao cố định */
+  overflow: hidden; /* Đảm bảo không bị vỡ layout */
+}
+
+.slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cắt ảnh để phù hợp mà không bị méo */
+  border-radius: 10px;
+
+}
+/* Ẩn thanh cuộn trên trình duyệt */
+.slick-track {
+  display: flex;
+  align-items: center; /* Căn giữa các ảnh */
+}
+/* Ẩn thanh cuộn trên trình duyệt */
+.slick-slider {
+  overflow: hidden;
+}
+
+.slick-slider::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn trên Chrome, Safari */
+}
+.slick-slider {
+  -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE, Edge */
+  scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+}
+
+
+/* Tùy chỉnh khoảng cách giữa các ảnh */
+.slick-slide {
+  padding: 0 10px; /* Tạo khoảng cách giữa các ảnh */
+}
+/* Chỉnh style cho các chấm */
+.slick-dots {
+  bottom: -10px; /* Dịch xuống dưới */
+}
+.slick-dots li button:before {
+  font-size: 12px; /* Điều chỉnh kích thước chấm */
+  color: #fff; /* Màu chấm */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff4500; /* Màu chấm active */
+}
+
+/* Section tiêu đề */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 40px 0;
+  color: #222;
+}
+
+/* Điểm đến hấp dẫn */
+.destination-container {
+  width: 90%;
+  margin: auto;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.destination-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background: #fff;
+  padding: 15px;
+}
+.destination-card:hover {
+  transform: scale(1.03);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px; /* Đặt chiều cao cố định */
+  object-fit: cover; /* Giữ tỷ lệ và cắt phần thừa */
+  border-radius: 10px;
+}
+
+.card-content {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn-like {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ff4d4d;
+}
+
+.btn-like:hover {
+  color: #ff0000;
+}
+
+.btn-bookmark {
+  background-color: #525151;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-bookmark:hover {
+  background-color: #98aa34;
+}
+
+.btn-comment {
+  background-color: #99bee6;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-comment:hover {
+  background-color: #0056b3;
+}
+
+
+/* Cẩm nang du lịch */
+.blog-container {
+  width: 90%;
+  margin: auto;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blog-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background: #fff;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px; /* Đặt chiều cao cố định */
+  object-fit: cover; /* Cắt ảnh để vừa với kích thước */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.blog-content {
+  padding: 15px;
+}
+
+.blog-date {
+  color: #777;
+  font-size: 14px;
+}
+
+
+/* Dịch vụ */
+.services-container {
+  width: 90%;
+  margin: auto;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  flex: 1 1 calc(33.333% - 20px);
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card i {
+  font-size: 2rem;
+  color: #1877f2;
+}
+
+
+
+.post-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tự động chia cột, tối thiểu 300px */
+  gap: 20px; /* Khoảng cách giữa các bài viết */
+  padding: 20px;
+}
+
+
+/* Lưới bài viết 2 cột */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Card bài viết */
+.post-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Nội dung bài viết */
+.post-card p {
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Hình ảnh trong bài viết */
+.post-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 100px;
+
+}
+
+/* Nếu có nhiều ảnh, giới hạn chiều cao */
+.post-images img {
+  max-height: 200px;
+}
+
+/* Cảm xúc, địa điểm */
+.post-card p:nth-child(3),
+.post-card p:nth-child(4) {
+  font-weight: bold;
+  color: #555;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 6px;  /* Giảm padding ngang */
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.3s;
+  display: inline-block;
+  width: 40px;  /* Hoặc đặt width cụ thể nếu cần, ví dụ: width: 50px; */
+  min-width: 30px; /* Đảm bảo không quá nhỏ */
+  text-align: center;
+}
+
+.delete-button:hover {
+  background-color: #d43f3f;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.confirm-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cancel-btn {
+  background: gray;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
